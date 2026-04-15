@@ -50,9 +50,9 @@ export default function Login() {
     }}>
       {/* Left panel — branding */}
       <div style={{
-        flex: 1, flexDirection: 'column',
+        flex: 1,display:'flex', flexDirection: 'column',
         alignItems: 'center', justifyContent: 'center', padding: '60px 48px',
-        display: 'none',
+        
       }} className="login-left">
         <div style={{ maxWidth: 440, textAlign: 'center', animation: 'slideIn 0.5s var(--ease)' }}>
           <div style={{
