@@ -36,12 +36,8 @@ export default function Sidebar({ isOpen, onClose }) {
     .toUpperCase() || '?'
 
   return (
-    <aside style={{
-      position: 'fixed', top: 0, left: isOpen ? 0 : 'var(--sidebar-w)', bottom: 0,
-      width: 'var(--sidebar-w)', background: 'var(--sidebar-bg)',
+    <aside className={`sidebar-container ${isOpen ? 'open' : ''}`} style={{
       display: 'flex', flexDirection: 'column',
-      borderRight: '1px solid rgba(255,255,255,0.06)',
-      zIndex: 100, transition: 'left 0.3s var(--ease)',
     }}>
       {/* Brand */}
       <div style={{ padding: '28px 20px 20px', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>

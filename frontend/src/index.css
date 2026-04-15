@@ -348,3 +348,16 @@ tbody tr:hover { background: var(--primary-faint); }
 .detail-item { display: flex; flex-direction: column; gap: 4px; }
 .detail-key { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); }
 .detail-val { font-size: 0.925rem; font-weight: 500; color: var(--text-primary); }
+
+/* ── Sidebar Container ── */
+.sidebar-container {
+  position: fixed; top: 0; left: 0; bottom: 0;
+  width: 260px; /* fixed width, independently of the layout variable */
+  background: var(--sidebar-bg);
+  border-right: 1px solid rgba(255,255,255,0.06);
+  z-index: 100; transition: transform var(--duration) var(--ease);
+}
+@media (max-width: 768px) {
+  .sidebar-container { transform: translateX(-100%); }
+  .sidebar-container.open { transform: translateX(0); }
+}
